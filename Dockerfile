@@ -1,5 +1,6 @@
 #FROM resin/rpi-raspbian:jessie
-FROM hypriot/rpi-alpine-scratch
+#FROM hypriot/rpi-alpine-scratch
+FROM resin/armv7hf-debian-qemu
 MAINTAINER nmcaullay <nmcaullay@gmail.com>
 #ENV DEBIAN_FRONTEND noninteractive
 
