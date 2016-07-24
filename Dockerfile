@@ -1,4 +1,5 @@
-FROM resin/rpi-raspbian:jessie
+#FROM resin/rpi-raspbian:jessie
+FROM hypriot/rpi-alpine-scratch
 MAINTAINER nmcaullay <nmcaullay@gmail.com>
 #ENV DEBIAN_FRONTEND noninteractive
 
