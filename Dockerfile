@@ -5,9 +5,6 @@ ENV DEBIAN_FRONTEND noninteractive
 # Set correct environment variables.
 ENV HOME /root
 
-#Create the HTS user (1000), and add to user group (100)
-RUN useradd -u 1000 -g 100 hts
-
 # Install dependencies, build and install tvheadend
 RUN apt-get update -qq && \
     apt-get install -qy \
@@ -24,6 +21,9 @@ RUN apt-get update -qq && \
     make && \
     make install && \
     rm -r /tmp/tvheadend && apt-get purge -qq build-essential pkg-config git && apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+
+#Create the HTS user (1000), and add to user group (100)
+RUN useradd -u 1000 -g 100 hts
 
 #Expose the TVH ports
 EXPOSE 9981 9982
