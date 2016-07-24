@@ -2,6 +2,8 @@
 #FROM hypriot/rpi-alpine-scratch
 FROM resin/armv7hf-debian-qemu
 
+RUN [ "cross-build-start" ]
+
 RUN apt-get update && apt-get install -y \
 		autoconf \
 		build-essential \
