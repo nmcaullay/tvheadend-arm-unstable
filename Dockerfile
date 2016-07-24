@@ -1,9 +1,9 @@
 FROM resin/rpi-raspbian:jessie
 MAINTAINER nmcaullay <nmcaullay@gmail.com>
-ENV DEBIAN_FRONTEND noninteractive
+#ENV DEBIAN_FRONTEND noninteractive
 
 # Set correct environment variables.
-ENV HOME /root
+#ENV HOME /root
 
 # Install dependencies, build and install tvheadend
 RUN apt-get update -qq && \
